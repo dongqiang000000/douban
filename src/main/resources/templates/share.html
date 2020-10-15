@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <div th:fragment="share">
+      <link rel="stylesheet" href="/css/share.css">
+      <script src="/js/qrcode-min.js"></script>
+      <div class="share-content">
+          <div id="qrcode"></div>
+          <p>扫描分享到微信</p>
+          <div class="share-logo">
+              <img src="./images/dou.png">
+              <img src="./images/weibo.png">
+              <img src="./images/QQ.png">
+              <img src="./images/copy.png">
+          </div>
+      </div>
+      <script src="./js/share.js"></script>
+  </div>
+</html>

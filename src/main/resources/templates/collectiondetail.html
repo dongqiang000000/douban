@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="referrer" content="no-referrer"/>
+    <link rel="stylesheet" href="/css/collectiondetail.css">
+</head>
+<body>
+<div class="all-songs-container">
+    <div class="all-songs-container-return">
+        <img src="./images/all-songs-left.png">
+        返回
+    </div>
+    <img class="cross" src="./images/return.png">
+    <div class="all-songs-content">
+        <div class="info">
+            <div class="info-left">
+                <img th:src="${singer.avatar}">
+                <div class="text">
+                    <p>歌曲列表([[${songs.size()}]])</p>
+                    <span>豆瓣FM的其他歌单(3)</span>
+                </div>
+            </div>
+            <div class="info-right">
+                <p>[[${singer.name}]]  的精选歌曲</p>
+                <span>豆瓣FM创建[[${songs.size()}]]首歌曲 2015-09-10</span>
+            </div>
+        </div>
+        <ul class="all-songs-list">
+            <li th:each="song,it : ${songs}">
+                <img th:src="${song.cover}">
+                <p>[[${it.count}]].[[${song.name}]]</p>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

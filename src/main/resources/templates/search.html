@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout">
+
+<div th:fragment="content">
+    <link rel="stylesheet" href="/css/search.css">
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="/css/search.css">-->
+<!--</head>-->
+<body>
+    <main>
+        <div class="content">
+            <input class="search" placeholder="搜你喜欢的歌曲">
+            <p class="cancel">取消</p>
+        </div>
+        <ul class="singer">
+        </ul>
+    </main>
+</body>
+<script src="./js/search.js"></script>
+</div>
+</html>

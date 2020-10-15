@@ -1,0 +1,93 @@
+*{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style:none;
+}
+main .header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    line-height:17px;
+    color:#979797;
+    margin-top:44px;
+}
+main .header .mhz{
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+}
+main .header .mhz .mhz-logo{
+    width:24px;
+    height:24px;
+    margin-right:2px;
+
+    background:url("../images/yiPing-MHZ.png") no-repeat center/24px 24px;
+}
+main .header .songList{
+  display:flex;
+  align-items:center;
+  margin-left:50px;
+  cursor:pointer;
+}
+main .header .songList .songList-logo{
+    width:17px;
+    height:17px;
+    margin-right:7px;
+    background:url("../images/yiPing-songList.png") no-repeat center/17px 17px;
+}
+main .header .my{
+  display:flex;
+  align-items:center;
+  margin-left:50px;
+  cursor:pointer;
+}
+main .header .my .my-logo{
+    width:16px;
+    height:13.98px;
+    margin-right:7px;
+    background:url("../images/my-selected.png") no-repeat center/16px 13.98px;
+}
+main .my-content{
+  width:700px;
+  margin:40px auto;
+}
+main .my-content .my-content-header{
+  border-bottom:1px solid #EAEAEA;
+  width:700px;
+  font-size:12px;
+  color:#9C9C9C;
+}
+main .my-content .my-content-header .my-heart{
+    text-align:center;
+    color:#2F9842;
+}
+main .my-content .my-content-header .my-play{
+  display:flex;
+  margin-top:49px;
+  align-items:center;
+  margin-bottom:25px;
+}
+main .my-content .my-content-header .my-play .play-logo{
+  width:42px;
+  height:42px;
+  margin-right:20px;
+}
+main .my-content>ul{
+  margin-top:25px;
+}
+main .my-content>ul>li{
+  display:flex;
+  font-size:14px;
+  font-weight:500;
+  color:#212121;
+  align-items:center;
+  margin-bottom:20px;
+}
+main .my-content>ul>li>img{
+  width:40px;
+  height:40px;
+  margin-right:10px;
+}

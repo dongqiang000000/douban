@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout">
+
+<div th:fragment="content">
+    <meta name="referrer" content="no-referrer"/>
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="referrer" content="no-referrer"/>-->
+
+<!--    <title>Title</title>-->
+<!--</head>-->
+<body>
+<!--<div th:fragment="mhzdetail">-->
+    <link rel="stylesheet" href="/css/mhzdetail.css">
+    <main class="subject-info">
+        <img class="return" src="./images/return.png">
+        <div class="share">
+            <img class="share" src="./images/share.png">
+            <span>分享</span>
+        </div>
+        <div class="mhzdetail-content">
+            <div class="singer-box">
+                <img th:src="${singer.avatar}">
+                <p>[[${singer.name}]]</p>
+                <div class="love" th:onclick="love('singer',[[${singer.id}]])"><span>喜欢  </span><span class="conte">[[${favorites.size()
+                    }]]</span></div>
+            </div>
+            <div class="song-box">
+                <div class="play">
+                    <img src="./images/subject-play.png">
+                    全部精选歌曲
+                </div>
+                <ul class="songs-list">
+                    <li th:each="song,it : ${songs}">
+                        <img th:src="${song.cover}">
+                        <p>[[${it.count}]].[[${song.name}]]</p>
+                    </li>
+                </ul>
+                <div class="all-songs">查看全部精选歌曲</div>
+            </div>
+            <div class="simSinger-box">
+                <div class="simSing-play">
+                    <img src="./images/subject-play.png">
+                    [[${subject.name}]]
+                </div>
+                <p>该兆赫可能包含以下相似艺术家的歌曲</p>
+                <ul class="simSinger-list">
+                    <li th:each="simSinger : ${simSingers}">
+                        <img th:src="${simSinger.avatar}">
+                        <p>[[${simSinger.name}]]</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="all-songs-container">
+        <div class="all-songs-container-return">
+            <img src="./images/all-songs-left.png">
+            返回
+        </div>
+        <img class="cross" src="./images/return.png">
+        <div class="all-songs-content">
+            <div class="info">
+                <div class="info-left">
+                    <img th:src="${singer.avatar}">
+                    <div class="text">
+                        <p>歌曲列表([[${songs.size()}]])</p>
+                        <span>豆瓣FM的其他歌单(3)</span>
+                    </div>
+                </div>
+                <div class="info-right">
+                    <p>[[${singer.name}]]  的精选歌曲</p>
+                    <span>豆瓣FM创建[[${songs.size()}]]首歌曲 2015-09-10</span>
+                </div>
+            </div>
+            <ul class="all-songs-list">
+                <li th:each="song,it : ${songs}">
+                    <img th:src="${song.cover}">
+                    <p>[[${it.count}]].[[${song.name}]]</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script src="./js/mhzdetail.js"></script>
+</body>
+</div>
+</html>

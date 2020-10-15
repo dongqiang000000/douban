@@ -1,0 +1,156 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    padding:97px 200px 0 200px;
+    background:#FBFBFB;
+}
+.content{
+    border:1px solid #E4E4E4;
+    margin:0 auto;
+    width:1040px;
+}
+header{
+display:flex;
+background:#FBFBFB;
+font-size:12px;
+line-height:17px;
+color:#2F9842;
+padding-top:30px;
+justify-content:flex-end;
+align-items:center;
+}
+header .login{
+    cursor:pointer;
+}
+header>img{
+    width:7.31px;
+    height:13px;
+    margin-left:7.8px;
+    margin-right:32px;
+}
+main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:63px;
+}
+main .title{
+    font-size:30px;
+    line-height:42px;
+}
+main>ul{
+    display:flex;
+    margin-top:60px;
+    width:760px;
+    flex-wrap:wrap;
+}
+main>ul>li{
+    width:100px;
+    margin-right:65px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:30px;
+    position:relative;
+}
+main>ul>li .avatar-background{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:red;
+    position:absolute;
+    opacity:0.8;
+    display:none;
+}
+main>ul>li .avatar-selected{
+    width:30px;
+    height:22px;
+    position:absolute;
+    left:35px;
+    top:39px;
+    display:none;
+    background:url("../images/singer-gouzi.png") no-repeat center/30px 22px;;
+}
+main>ul>li:nth-child(5n){
+    margin-right:0;
+}
+main>ul>li>img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+main>ul>li .name{
+    font-size:12px;
+    line-height:17px;
+    text-align:center;
+    width:100px;
+    margin-bottom:10px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+main>ul>li .love{
+    border:1px solid #FF4874;
+    padding:1px 8px;
+    font-size:12px;
+    line-height:17px;
+    color:#FF4874;
+    cursor:pointer;
+}
+main .change-select{
+    display:flex;
+    align-items:center;
+    margin-top:50px;
+}
+main .change-select .change1{
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    font-size:12px;
+    line-height:16.8px;
+}
+main .change-select .change{
+    margin-right:47.69px;
+}
+main .change-select .change>img{
+    width:14px;
+    height:14.83px;
+    margin-right:5px;
+}
+main .change-select .select>img{
+    width:18px;
+    height:18px;
+    margin-right:3px;
+}
+main .selected-singer{
+    display:flex;
+    margin-top:31px;
+}
+main .selected-singer>span{
+    width:50px;
+    height:50px;
+    margin-right:20px;
+    background:url("../images/selected-singer.png") no-repeat center/50px 50px;
+    border-radius:50%;
+}
+main .selected-singer>span:nth-child(5){
+    margin-right:0;
+}
+main .skip{
+    display:flex;
+    margin-top:60px;
+    align-items:center;
+    font-size:12px;
+    line-height:16.8px;
+    color:#AEAEAE;
+    cursor:pointer;
+}
+main .skip>img{
+    width:7.31px;
+    height:13px;
+    margin-left:7.84px;
+}

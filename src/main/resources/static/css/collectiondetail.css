@@ -1,0 +1,77 @@
+/*所有歌曲*/
+.all-songs-container{
+    width:786px;
+    margin:171px auto;
+    border:1px solid #E4E4E4;
+    box-sizing:border-box;
+    padding-bottom:40px;
+    position:relative;
+}
+.all-songs-container .all-songs-container-return{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    margin-left:-55px;
+    font-size:12px;
+    color:#767676;
+    cursor:pointer;
+}
+.all-songs-container .all-songs-container-return>img{
+    position:relative;
+    margin-left:0;
+    margin-right:7px;
+    width:7.31px;
+    height:13px;
+}
+.all-songs-container .cross {
+    position:absolute;
+    width:14px;
+    height:14px;
+    margin-left:800px;
+}
+.all-songs-container .all-songs-content{
+    width:586px;
+    margin:55px auto;
+}
+.all-songs-container .all-songs-content .info{
+    width:586px;
+    border-bottom:1px solid #EAEAEA;
+    display:flex;
+}
+.all-songs-container .all-songs-content .info .info-left {
+    margin-bottom:10px;
+}
+.all-songs-container .all-songs-content .info .info-left>img{
+    width:180px;
+    height:180px;
+}
+.all-songs-container .all-songs-content .info .info-left .text {
+    margin-top:30px;
+    display:flex;
+    font-size:12px;
+}
+.all-songs-container .all-songs-content .info .info-left .text>span{
+    opacity:0.4;
+    margin-left:30px;
+}
+.all-songs-container .all-songs-content .info .info-right>p {
+    font-size:30px;
+}
+.all-songs-container .all-songs-content .info .info-right>span{
+    font-size:12px;
+    color:#ADADAD;
+}
+.all-songs-container .all-songs-content>ul{
+    margin-top:30px;
+}
+.all-songs-container .all-songs-content>ul>li{
+    display:flex;
+    font-size:12px;
+    align-items:center;
+    margin-bottom:18px;
+}
+.all-songs-container .all-songs-content>ul>li>img{
+    width:20px;
+    height:20px;
+    margin-right:10px;
+}

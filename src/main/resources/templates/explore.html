@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="explore">
+    <div class="erPing">
+        <div class="e-h" th:fragment="header">
+<!--            <link rel="stylesheet" href="/css/explore.css" />-->
+        <div class="erPing-header">
+            <img class="erPing-logo" src="./images/logo.png">
+                <div class="erPing-header-player">
+                    <span >[[${song.name}]]</span>
+                    <div class="erPing-progress">
+                        <div class="erPing-music-progress"></div>
+                    </div>
+                    <div class="erPing-name">
+                        <div class="left">
+                            <div class="title">欢迎来到本站</div>
+                            <div class="erPing-jianTou">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="erPing-music-time"></div>
+                            <img class="erPing-volume" src="./images/volume.png">
+                        </div>
+                    </div>
+                </div>
+                <img class="erPing-love" src="./images/love.png" th:onclick="loveSong('song',[[${song.id}]])">
+                <img class="erPing-delete" src="./images/delete.png">
+                <img class="erPing-song-control" src="./images/song-control.png">
+                <img class="erPing-back-song" src="./images/back-song.png">
+                <img class="erPing-play" src="./images/play.png">
+                <img class="erPing-next-song" src="./images/next-song.png">
+                <img class="erPing-song-list" src="./images/song-list.png">
+                <p class="erPing-login">登录 | 注册</p>
+                <img class="erPing-circular" src="./images/erPing-circular.png">
+            </div>
+        </div>
+        <main class="erPing-main">
+            <div class="erPing-main-header">
+                <div class="erPing-mhz"><span class="erPing-mhz-logo"></span>兆赫</div>
+                <div class="erPing-songList"><span class="erPing-songList-logo"></span>歌单</div>
+                <div class="erPing-my"><span class="erPing-my-logo"></span>我的</div>
+            </div>
+            <div class="erPing-my-mhz">
+                <div class="my-mhz">
+                    <img src="./images/my-mhz.png">
+                    <div class="my-mhz-text">
+                        <p class="my-mhz-point">我的私人兆赫</p>
+                        豆瓣FM会根据你的喜好来推荐歌曲，让你与喜欢的音乐不期而遇
+                    </div>
+                </div>
+                <div class="douban-mhz">
+                    <img src="./images/douban-mhz.png">
+                    <div class="douban-mhz-text">
+                        <p>豆瓣精选兆赫</p>
+                        汇聚各种音乐风格的精选兆赫，从这里开始音乐漫游吧
+                    </div>
+                </div>
+            </div>
+            <div class="erPing-artist">
+                <div class="erPing-artist-logo">从艺术家出发<img src="./images/erPing-artist-logo.png"></div>
+                <ul class="artist-list">
+                    <li class="artist-item" th:each="artistData : ${artistDatas}">
+                        <img class="artist-cover" th:src="${artistData.cover}">
+                        <div class="artist-play"></div>
+                        <span class="artist-name" th:text="${artistData.name}" th:onclick="clickArtistName([[${artistData.id}]])"></span>
+                        <p th:text="${artistData.description}"></p>
+                    </li>
+                </ul>
+                <div class="more-mhz">加载更多兆赫</div>
+            </div>
+            <div class="mhzView" th:each="mhzViewModel : ${mhzViewModels}">
+                <div class="mood-name" th:text="${mhzViewModel.title}"></div>
+                <ul class="mood-name-mhz">
+                    <li class="mood-name-mhz-item" th:each="subject : ${mhzViewModel.subjects}">
+                        <p><span th:text="${subject.name}"></span>MHz</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+<!--        <div class="flash">-->
+<!--            <div class="mhzdetail" style="display:none;">-->
+<!--                <script type="text/javascript" src="./js/explore.js"></script>-->
+<!--                <div th:fragment="mhzdetail" >-->
+<!--                    <div class="m" th:replace="mhzdetail::mhzdetail"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <script type="text/javascript" src="./js/explore.js"></script>-->
+    </div>
+</div>
+</html>

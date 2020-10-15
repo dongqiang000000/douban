@@ -1,0 +1,347 @@
+/*二屏头部*/
+.erPing{
+  margin-top:40px;
+}
+.e-h{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1;
+    opacity:0.8;
+    background:#E5E5E5;
+}
+.erPing-header{
+    width:1525px;
+    height:92px;
+    margin:0 auto;
+    opacity:0.8;
+    background:#E5E5E5;
+    padding:0 200px 0 200px;
+    justify-content:center;
+    box-sizing:border-box;
+    align-items:center;
+    display:flex;
+}
+.erPing-header .erPing-logo{
+    width:80px;
+    height:32px;
+}
+.erPing-header .erPing-header-player{
+    margin-left:75px;
+}
+.erPing-header .erPing-header-player>span{
+    font-size:14px;
+    line-height:20px;
+}
+.erPing-header .erPing-header-player .erPing-progress{
+    width:390px;
+    height:2px;
+    cursor:pointer;
+    background:#E9E9E9;
+}
+.erPing .erPing-header .erPing-header-player .erPing-progress .erPing-music-progress{
+    width:0%;
+    height:100%;
+    background:#2F9842;
+}
+.erPing-header .erPing-header-player .erPing-name{
+    display:flex;
+    margin-top:6px;
+    justify-content:space-between;
+    align-items:center;
+}
+.erPing-header .erPing-header-player .erPing-name .left{
+    display:flex;
+    align-items:center;
+}
+.erPing-header .erPing-header-player .erPing-name .left .title{
+    font-size:12px;
+    line-height:17px;
+    color:#2F9842;
+}
+.erPing-header .erPing-header-player .erPing-name .left .erPing-jianTou{
+    margin-left:6px;
+}
+.erPing-header .erPing-header-player .erPing-name .left .erPing-jianTou .up{
+    width:6px;
+    height:4px;
+    background:url("../images/up.png") no-repeat center /6px 4px;
+}
+.erPing-header .erPing-header-player .erPing-name .left .erPing-jianTou .down{
+    width:6px;
+    height:4px;
+    margin-top:1.5px;
+    background:url("../images/down.png") no-repeat center /6px 4px;
+}
+.erPing-header .erPing-header-player .erPing-name .right{
+    display:flex;
+}
+.erPing-header .erPing-header-player .erPing-name .right .erPing-music-time{
+    font-size:10px;
+    line-height:14px;
+    color:#7E7E7E;
+}
+.erPing-header .erPing-header-player .erPing-name .right .erPing-volume{
+    width:12px;
+    height:10px;
+    margin-left:10px;
+}
+.erPing-header .erPing-love{
+    width:20px;
+    height:19px;
+    margin-left:50px;
+    cursor: pointer;
+}
+.erPing-header .erPing-delete{
+    width:18px;
+    height:20px;
+    margin-left:25px;
+    cursor: pointer;
+}
+.erPing-header .erPing-song-control{
+    width:14px;
+    height:12px;
+    margin-left:49px;
+    cursor: pointer;
+}
+.erPing-header .erPing-back-song{
+    width:18px;
+    height:20px;
+    margin-left:15px;
+    cursor: pointer;
+}
+.erPing-header .erPing-play{
+    width:18px;
+    height:20px;
+    margin-left:25px;
+    cursor: pointer;
+}
+.erPing-header .erPing-next-song{
+    width:18px;
+    height:20px;
+    margin-left:25px;
+    cursor: pointer;
+}
+.erPing-header .erPing-song-list{
+    width:14px;
+    height:10px;
+    margin-left:15px;
+    cursor: pointer;
+}
+ .erPing-header .erPing-login{
+    font-size:12px;
+    line-height:17px;
+    color:#B3B3B3;
+    margin-left:40px;
+    cursor: pointer;
+}
+.erPing-header .erPing-circular{
+    width:20px;
+    height:20px;
+    margin-left:20px;
+}
+
+/*二屏内容*/
+.erPing .erPing-main{
+    width:1024px;
+    box-sizing:border-box;
+    padding-top:40px;
+    margin:0 auto;
+}
+.erPing .erPing-main .erPing-main-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    line-height:17px;
+    color:#979797;
+}
+.erPing .erPing-main .erPing-main-header .erPing-mhz{
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+}
+.erPing .erPing-main .erPing-main-header .erPing-mhz .erPing-mhz-logo{
+    width:24px;
+    height:24px;
+    margin-right:2px;
+    background:url("../images/yiPing-MHZ-selected.png") no-repeat center/24px 24px;
+}
+.erPing .erPing-main .erPing-main-header .erPing-songList{
+  display:flex;
+  align-items:center;
+  margin-left:50px;
+  cursor:pointer;
+}
+.erPing .erPing-main .erPing-main-header .erPing-songList .erPing-songList-logo{
+    width:17px;
+    height:17px;
+    margin-right:7px;
+    background:url("../images/yiPing-songList.png") no-repeat center/17px 17px;
+}
+.erPing .erPing-main .erPing-main-header .erPing-my{
+  display:flex;
+  align-items:center;
+  margin-left:50px;
+  cursor:pointer;
+}
+.erPing .erPing-main .erPing-main-header .erPing-my .erPing-my-logo{
+    width:16px;
+    height:13.98px;
+    margin-right:7px;
+    background:url("../images/my.png") no-repeat center/16px 13.98px;
+}
+.erPing .erPing-main .erPing-my-mhz{
+    display:flex;
+    margin-top:40px;
+    font-size:12px;
+    line-height:17px;
+    color:#BCBBBB;
+}
+.erPing .erPing-main .erPing-my-mhz .my-mhz{
+    display:flex;
+}
+.erPing .erPing-main .erPing-my-mhz .my-mhz>img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    margin-right:15px;
+}
+.erPing .erPing-main .erPing-my-mhz .my-mhz .my-mhz-text>p{
+    color:#000000;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+.erPing .erPing-main .erPing-my-mhz .douban-mhz{
+    display:flex;
+    margin-left:120px;
+}
+.erPing .erPing-main .erPing-my-mhz .douban-mhz>img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    margin-right:15px;
+}
+.erPing .erPing-main .erPing-my-mhz .douban-mhz .douban-mhz-text>p{
+    color:#000000;
+    margin-bottom:10px;
+}
+.erPing .erPing-main .erPing-artist{
+    font-size:14px;
+    margin-top:50px;
+    line-height:20px;
+    color:#A6A6A6;
+}
+.erPing .erPing-main .erPing-artist .erPing-artist-logo{
+    display:flex;
+    align-items:center;
+}
+.erPing .erPing-main .erPing-artist .erPing-artist-logo>img{
+    width:15px;
+    height:17px;
+    margin-left:10px;
+}
+.erPing .erPing-main .erPing-artist>ul{
+    width:1040px;;
+    height:495px;
+    display:flex;
+    margin-top:50px;
+    box-sizing:border-box;
+    flex-wrap:wrap;
+    overflow:hidden;
+}
+.erPing .erPing-main .erPing-artist>ul .artist-item{
+    width:208px;
+    height:227px;
+    font-size:12px;
+    line-height:17px;
+    color:#B0B0B0;
+    margin-bottom:40px;
+    box-sizing:border-box;
+    border-bottom:1px solid #EFEFEF;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    align-items:center;
+}
+.erPing .erPing-main .erPing-artist>ul .artist-item>img{
+    width:120px;
+    height:120px;
+    margin-left:44px;
+    border-radius:50%;
+    margin-right:44px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+.erPing .erPing-main .erPing-artist>ul .artist-item .artist-play{
+    width:0px;
+    height:0px;
+    border:14px solid;
+    border-color:transparent transparent transparent #FFFFFF;
+    border-radius:2px;
+    position:absolute;
+    display:none;
+    left:98px;
+    top:50px;
+    cursor:pointer;
+}
+.erPing .erPing-main .erPing-artist>ul .artist-name{
+    margin-bottom:10px;
+    font-size:14px;
+    line-height:20px;
+    color:#000000;
+    cursor:pointer;
+}
+.erPing .erPing-main .erPing-artist>ul .artist-name:hover{
+    border-bottom:1px solid #EFEFEF;
+}
+.erPing .erPing-main .erPing-artist .more-mhz{
+    margin:40px auto;
+    width:110px;
+    height:25px;
+    box-sizing:border-box;
+    border:1px solid #E0E0E0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size12px;
+    line-height:17px;
+    color:#AEAEAE;
+    cursor:pointer;
+}
+.erPing .erPing-main .mhzView{
+    font-size:12px;
+    line-height:17px;
+    color:#A6A6A6;
+    margin-top:40px;
+    width:1040px;
+}
+.erPing .erPing-main .mhzView .mood-name{
+    border-bottom:1px solid #EFEFEF;
+    box-sizing:border-box;
+    padding-bottom:10px;
+}
+.erPing .erPing-main .mhzView>ul{
+    display:flex;
+    flex-wrap:wrap;
+}
+.erPing .erPing-main .mhzView>ul .mood-name-mhz-item{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    box-sizing:border-box;
+    border-bottom:1px solid #EFEFEF;
+    width:208px;
+    padding-bottom:20px;
+    align-items:center;
+}
+.erPing .erPing-main .mhzView>ul .mood-name-mhz-item>p{
+    cursor:pointer;
+}
+.erPing .erPing-main .mhzView>ul .mood-name-mhz-item>p>span{
+    font-size:14px;
+    line-height:20px;
+    color:#1C1C1C;
+    margin-right:6px;
+}
+

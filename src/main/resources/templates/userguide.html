@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout">
+<div th:fragment="content">
+    <link rel="stylesheet" href="/css/userguide.css" />
+    <script src="./js/jquery.js" type="text/javascript"></script>
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+<!--    <link rel="stylesheet" href="/css/userguide.css" />-->
+<!--    <script src="./js/jquery.js" type="text/javascript"></script>-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<body>
+<div class="content">
+    <header class="header-login">
+        <p class="login">已有账号登陆</p>
+        <img src="./images/right.png">
+    </header>
+    <main>
+        <div class="title">挑选你喜欢的艺术家，开启私人音乐之旅</div>
+            <ul class="singer-info">
+                <li class="xx" th:each="singer,it : ${singers}" th:fragment="singer-info">
+                    <img class="singer-avatar" th:classappend="'avatar-background-'+${singer.id}" th:src="${singer.avatar}">
+                    <div th:class="avatar-background" th:classappend="'avatar-background-'+${singer.id}"></div>
+                    <div class="avatar-selected" th:classappend="'avatar-background-'+${singer.id}"></div>
+                    <p class="name" th:text="${singer.name}"></p>
+                    <p class="love" th:onclick="loveAdd([[${singer.id}]])" th:classappend="'avatar-background-'+${singer.id}">喜欢</p>
+                </li>
+            </ul>
+        <div class="change-select">
+            <div class="change1 change">
+                <img src="./images/change.png">
+                <p>换一批</p>
+            </div>
+            <div class="change1 select">
+                <img src="./images/search.png">
+                <p>自己搜</p>
+            </div>
+        </div>
+        <div class="selected-singer">
+            <span class="selected-singer-avatar"></span>
+            <span class="selected-singer-avatar"></span>
+            <span class="selected-singer-avatar"></span>
+            <span class="selected-singer-avatar"></span>
+            <span class="selected-singer-avatar"></span>
+        </div>
+        <div class="skip">
+            <p>跳过，直接去听歌</p>
+            <img src="./images/skip.png">
+        </div>
+    </main>
+</div>
+<script type="text/javascript" src="./js/userguide.js"></script>
+</body>
+</div>
+</html>

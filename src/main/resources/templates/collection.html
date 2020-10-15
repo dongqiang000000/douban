@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout">
+<div th:fragment="content">
+    <meta name="referrer" content="no-referrer"/>
+    <link rel="stylesheet" href="/css/collection.css">
+    <main>
+        <div class="header">
+            <div class="mhz"><span class="mhz-logo"></span>兆赫</div>
+            <div class="songList"><span class="songList-logo"></span>歌单</div>
+            <div class="my"><span class="my-logo"></span>我的</div>
+        </div>
+        <ul class="content">
+            <li th:each="subject,it : ${subjects}">
+                <img th:src="${subject.cover}">
+                <p class="subject-name" th:onclick="collectionDetail([[${subject.id}]])">[[${subject.name}]]</p>
+                <div class="text">
+                    <p class="singer-name">[[${singers[it.index].name}]]  创建</p>
+                    <p>曲目 [[${lists[it.index].size()}]]  收藏 0</p>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <script src="./js/collection.js"></script>
+</div>

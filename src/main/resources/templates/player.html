@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="player">
+    <meta name="referrer" content="no-referrer" />
+<!--    <link rel="stylesheet" href="/css/player.css" />-->
+    <div class="yiPing">
+        <div class="yiPing-share">
+            <div th:replace="share::share"></div>
+        </div>
+        <div class="head">
+            <header>
+                <div class="logo">
+                    <img src="./images/logo.png">
+                    <span>下载豆瓣FM APP · 我要反馈</span>
+                </div>
+                <p class="login">登录 | 注册</p>
+            </header>
+        </div>
+      <div class="content">
+          <div class="download">
+              <img src="./images/download.png">
+              <p>下载豆瓣FM APP 让好音乐继续</p>
+          </div>
+          <audio class="audio" th:src="${song.url}"></audio>
+          <div class="music">
+              <div class="mhz">
+                  <div class="music-spectrum">
+                      <div class="spectrum spectrum1"></div>
+                      <div class="spectrum spectrum2"></div>
+                      <div class="spectrum spectrum3"></div>
+                      <div class="spectrum spectrum4"></div>
+                  </div>
+                  <p>欢迎来到本站</p>
+                  <div class="jianTou">
+                      <div class="up"></div>
+                      <div class="down"></div>
+                  </div>
+              </div>
+              <div class="music-info">
+                  <div class="song-name">
+                      <span th:text="${song.name}">我不完美</span>
+                  </div>
+                  <div class="singer-name">
+                      <span th:each="singer : ${singers}" th:text="${singer.name} "></span>
+                  </div>
+                  <div class="music-time">
+                      <div class="music-time-left">
+                          <span class="remaining-time"></span>
+                          <img class="volume" src="./images/volume.png">
+                      </div>
+                      <div class="music-time-right">
+                          <img class="lyric" src="./images/lyric.png">
+                          <img class="download-song" src="./images/download-song.png">
+                          <img class="share" src="./images/share.png">
+                      </div>
+                  </div>
+                  <div class="music-progress">
+                      <div class="progress"></div>
+                  </div>
+                  <div class="music-love">
+                      <span class="love" th:onclick="loveSong('song',[[${song.id}]])"></span>
+                      <span></span>
+                      <span></span>
+                      <span class="state"></span>
+                      <span class="back-song"></span>
+                      <span class="played"></span>
+                      <span class="next-song"></span>
+                  </div>
+              </div>
+          </div>
+          <div class="avatar">
+              <img th:src="${song.cover}">
+          </div>
+      </div>
+      <div class="middle-login"><span class="middle-login-point">登录/注册</span> 后豆瓣FM将永久保留你的收听历史与喜好</div>
+      <div class="yiPing-circular"></div>
+    </div>
+<!--    <div class="yiPing-footer">-->
+<!--        <div class="yiPing-footer-mhz"><span class="yiPing-footer-mhz-logo"></span>兆赫</div>-->
+<!--        <div class="yiPing-footer-songList"><span class="yiPing-footer-songList-logo"></span>歌单</div>-->
+<!--    </div>-->
+    <div class="mask"></div>
+    <div class="model">
+        <img class="model-cross" src="./images/model-cross.png">
+        <div class="model-title">
+            <div class="model-login">密码登陆</div>
+            <div class="model-register">注册</div>
+        </div>
+        <div class="loginInfo">
+            <input class="login-input mobile" type="text" placeholder="手机号 / 邮箱">
+            <input class="login-input password" type="password" placeholder="密码">
+            <button class="login-douban">登录豆瓣</button>
+        </div>
+        <span class="login-square"></span>
+        <span class="auto-login">下次自动登录</span>
+    </div>
+<!--    <script type="text/javascript" src="./js/player.js"></script>-->
+</div>
+</html>

@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout">
+<div th:fragment="content">
+    <meta name="referrer" content="no-referrer"/>
+    <link rel="stylesheet" href="/css/my.css">
+    <main>
+        <div class="header">
+            <div class="mhz"><span class="mhz-logo"></span>兆赫</div>
+            <div class="songList"><span class="songList-logo"></span>歌单</div>
+            <div class="my"><span class="my-logo"></span>我的</div>
+        </div>
+        <div class="my-content">
+            <div class="my-content-header">
+                <div class="my-heart">我的红心</div>
+                <div class="my-play">
+                    <img class="play-logo" src="./images/my-play.png">
+                    <p>[[${favorites.size()}]]首红心歌曲</p>
+                </div>
+            </div>
+            <ul>
+                <li th:each="song : ${songs}">
+                    <img th:src="${song.cover}">
+                    <p>[[${song.name}]]</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script src="./js/my.js"></script>
+</div>
